@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_toast/flutter_toast.dart';
+import 'package:toast_simple/flutter_toast.dart';
 
 void main() {
   TestWidgetsFlutterBinding
