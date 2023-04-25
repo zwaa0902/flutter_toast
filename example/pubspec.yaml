@@ -1,8 +1,9 @@
 name: flutter_toast_example
 description: Demonstrates how to use the flutter_toast plugin.
-# The following line prevents the package from being accidentally published to
+version: 0.0.1
+homepage: https://github.com/zwaa0902/flutter_toast
+repository: https://github.com/zwaa0902/flutter_toast.git
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
   sdk: '>=3.1.0-12.0.dev <4.0.0'
@@ -15,16 +16,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
-    sdk: flutter
-
-  flutter_toast:
-    # When depending on this package from a real application you should use:
-    #   flutter_toast: ^x.y.z
-    # See https://dart.dev/tools/pub/dependencies#version-constraints
-    # The example app is bundled with the plugin so we use a path dependency on
-    # the parent directory to use the current plugin's version.
-    path: ../
-
+    sdk: flutter  
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -47,11 +39,17 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  uses-material-design: true
+plugin:
+    platforms:
+      android:
+        package: com.example.fluttertoast
+        pluginClass: FlutterToastPlugin
+      ios:
+        pluginClass: FlutterToastPlugin
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
   # assets:
